@@ -32,9 +32,12 @@ function generatePassword () {
     charChoice += charList.substring(62, 91)
   }
   console.log(charChoice)
-  var randomChar = Math.floor(Math.random() * charChoice.length);
-  var randomGen = charChoice[randomChar];
-  console.log(randomGen)
+  for (i=0; i < pass; i++) { // for loop to run bottom function for pass value
+    var randomChar = Math.floor(Math.random() * charChoice.length); // randomizes a character position by number from charChoice
+    var randomGen = charChoice[randomChar]; // converts number value in randomChar to character in position of charChoice
+    finalWord = finalWord + randomGen // loop runs for the number value in variable pass
+  }
+  console.log(finalWord)
 }
 
 // Get references to the #generate element
