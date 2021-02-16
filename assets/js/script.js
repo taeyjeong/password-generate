@@ -11,7 +11,29 @@ function generatePassword () {
     alert("Please try again."); // if the password doesnt fit 8-128 characters, it resets screen
     return;
   }
+  // adding numbers to password
+  var numChar = confirm("add numbers?")
+  if (numChar === true) {
+    charChoice += charList.substring(0,10)
+  }
+  // adding lowercase letters to password
+  var lowerChar = confirm("add lowercase letters?")
+  if (lowerChar === true) {
+    charChoice += charList.substring(10, 36)
+  }
+  // adding uppercase letters to password
+  var upperChar = confirm("add uppercase letters?")
+  if (upperChar === true) {
+    charChoice += charList.substring(36, 62)
+  }
+  // adding symbols to password
+  var symbols = confirm("add symbols?")
+  if (symbols === true) {
+    charChoice += charList.substring(62, 91)
+  }
+  console.log(charChoice)
 }
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
