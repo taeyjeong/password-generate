@@ -32,6 +32,9 @@ function generatePassword () {
     charChoice += charList.substring(62, 91)
   }
   console.log(charChoice)
+  var randomChar = Math.floor(Math.random() * charChoice.length);
+  var randomGen = charChoice[randomChar];
+  console.log(randomGen)
 }
 
 // Get references to the #generate element
